@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 
 import auth from '../firebase-init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 
   
@@ -96,7 +97,7 @@ Register
       </div>
     </div>
     </div>
-    {/* <SocialLogin></SocialLogin> */}
+    <SocialLogin></SocialLogin>
     </>
     );
 };
