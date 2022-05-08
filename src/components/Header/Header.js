@@ -28,11 +28,13 @@ const Header = () => {
             
          <div className='header-links'>
                 <Link to="/home">Home</Link>
+                <Link to="/inventory">Inventory</Link>
+                
                 {
-                    user ? <Link to="/additem">Add Item</Link> : <Link to="/inventory">Inventory</Link>
+                    user && <Link to="/additems">Add Item</Link> 
                 }
                 {
-                    user ? <Link to="/Managed Items">Managed Items</Link> :<Link to="/managedinventory">Managed Inventory</Link>
+                    user ? <Link to="/manageinventory">Managed Items</Link> :<Link to="/manageinventory">Manage Inventory</Link>
                 }
           </div>  
              <div className=''>

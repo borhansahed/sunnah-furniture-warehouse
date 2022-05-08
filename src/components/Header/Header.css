@@ -1,5 +1,5 @@
 .header-container{
-    margin: 2.3rem  0px;
+  margin-bottom: 2.2rem;
 
     display: flex;
     justify-content:center;
@@ -10,7 +10,7 @@
 
 }
 .header-title{
-    margin: 1.5rem 0px;
+    margin: 2.5rem 0px;
     margin-left: 5rem;
    line-height: 0px;
 }

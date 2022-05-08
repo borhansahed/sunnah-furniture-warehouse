@@ -9,6 +9,9 @@ import Register from './components/Register/Register';
 import RequireAuth from './components/RequireAuth/RequireAuth'
 import InventoryItems from './components/InventoryItems/InventoryItems'
 import NotFound from './components/NotFound/NotFound';
+import ManageInventory from './components/ManageInventory/ManageInventory';
+import MyItems from './components/MyItems/MyItems';
+import AddItems from './components/AddItems/AddItems';
 
 
 function App() {
@@ -20,6 +23,9 @@ function App() {
  <Route path='/home' element={<Home></Home>}></Route>
  <Route path='/login' element={<Login></Login>}></Route>
  <Route path='/register' element={<Register></Register>}></Route>
+ <Route path='/manageinventory' element={<ManageInventory></ManageInventory>}></Route>
+ <Route path='/myitems' element={<MyItems></MyItems>}></Route>
+ <Route path='/additems' element={<AddItems></AddItems>}></Route>
  <Route path='/inventory' element={
    <RequireAuth>
      <InventoryItems></InventoryItems>

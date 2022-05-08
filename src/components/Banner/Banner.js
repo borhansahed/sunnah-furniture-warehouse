@@ -28,7 +28,7 @@ const Banner = () => {
     />
 
     <Carousel.Caption>
-    <h2>30% OFF FOR YOUR FAMILY</h2>
+    <h2>30% OFF BUY ONE GET TWO</h2>
       <p>ENJOY THIS EID</p>
     </Carousel.Caption>
   </Carousel.Item>
@@ -40,7 +40,7 @@ const Banner = () => {
     />
 
     <Carousel.Caption>
-    <h2>60% OFF FOR YOUR FAMILY</h2>
+    <h2>60% OFF HURRY UP</h2>
       <p>ENJOY THIS EID</p>
     </Carousel.Caption>
   </Carousel.Item>
