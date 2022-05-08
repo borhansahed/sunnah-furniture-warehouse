@@ -1,0 +1,30 @@
+
+.second-part-title{
+    color: rgb(71, 71, 71);
+    margin-top: 6rem ;
+    font-weight: 500;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0px;
+    gap: 0px 5rem;
+    
+  
+    
+}
+.card-container p{
+    color: rgb(71, 71, 71);
+    
+  
+    
+}
+.card-container h5{
+    color: rgb(71, 71, 71);
+  
+    
+}
+/* .card-container p{
+    width: 5rem;
+
+} */
