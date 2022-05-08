@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import { FcGoogle } from "@react-icons/all-files/fc/FcGoogle";
-import auth from '../Firebase-init';
+
+
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import SocialLogin from '../SocialLogin/SocialLogin';
+
+import auth from '../firebase-init';
 
 
   
@@ -79,24 +79,24 @@ const handleRegister = event =>{
 </Form.Group>
 <Form.Group className="mb-3" controlId="formBasicPassword">
 <Form.Label>Confirm Password</Form.Label>
-<Form.Control onBlur={handleConfirmPassword}  type="password" placeholder="Password" />
+<Form.Control onBlur={handleConfirmPassword}  type="password" placeholder="Password" required />
 </Form.Group>
 <p>{error}</p>
 
 {/* <Button variant="btn btn-outline-primary d-block w-100 mb-3 d-flex justify-content-center align-items-center gap-2" type="submit">
 Register With  <FcGoogle></FcGoogle> 
 </Button> */}
-<Button variant="btn btn-outline-primary d-block w-100 mb-3" type="submit">
+<Button variant="btn btn-outline-dark d-block w-100 mb-3" type="submit">
 Register
 </Button>
 <Form.Text className=" register-text">
- Already have a account <Link to="/login">Login</Link>
+ Already have a account <Link to="/login" className='text-dark'>Login</Link>
 </Form.Text>
 </Form>
       </div>
     </div>
     </div>
-    <SocialLogin></SocialLogin>
+    {/* <SocialLogin></SocialLogin> */}
     </>
     );
 };
