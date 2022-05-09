@@ -28,3 +28,13 @@
     width: 5rem;
 
 } */
+@media screen and (max-width:668px) {
+    
+    .card-container{
+      flex-direction: column;
+      
+        
+      
+        
+    }
+ }

@@ -6,7 +6,7 @@
     align-items: center;
     cursor: pointer;
     gap: 15rem;
-    position: relative;
+    
 
 }
 .header-title{
@@ -28,4 +28,21 @@
 }
 .header-links{
    margin-right: 25rem;
+}
+@media screen and (max-width:668px) {
+   .header-container{
+      margin-bottom: 2.2rem;
+    
+        flex-direction: column;
+        gap: 2rem;
+    
+    }
+    
+    .header-links{
+       display: flex;
+       flex-direction: column;
+       margin-right: 0px;
+       
+    }
+   
 }
