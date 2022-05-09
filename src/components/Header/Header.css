@@ -30,6 +30,12 @@
    margin-right: 25rem;
 }
 @media screen and (max-width:668px) {
+
+   .header-title{
+      
+      margin-left: 0rem;
+     
+  }
    .header-container{
       margin-bottom: 2.2rem;
     
