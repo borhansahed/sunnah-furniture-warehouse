@@ -17,7 +17,7 @@ const Header = () => {
 
 <div className='header-title text-center'>
                <p className='fst-italic'> <small>since 1900</small> 
-               <span><h1 className='fw-bold' >Bassett</h1></span></p>
+               <span><h1 className='fw-bold' >Sunnah</h1></span></p>
                
                
                    

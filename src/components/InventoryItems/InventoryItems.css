@@ -12,3 +12,16 @@
     margin: 2rem auto;
     grid-row-gap: 2.5rem;
 }
+@media screen and (max-width:668px) {
+
+    .products{
+   
+        
+        grid-template-columns: repeat( 2 , 1fr);
+        max-width: 370px;
+       
+        
+    }
+
+
+}

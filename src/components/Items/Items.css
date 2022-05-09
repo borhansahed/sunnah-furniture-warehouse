@@ -20,3 +20,14 @@
  text-decoration: none;
 
 }
+@media screen and (max-width:668px) {
+    .product-btn {
+        position: absolute;
+       top: 40%;
+       left: 26%;
+       font-size: 10px;
+       
+      
+      
+      }
+}

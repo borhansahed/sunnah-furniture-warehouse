@@ -5,7 +5,7 @@ import './InventoryItems.css'
 
 const InventoryItems = () => {
     
-    const [products , setProducts] = UseInventory();
+    const [products ] = UseInventory();
     return (
         <>
         <h3 className='text-center products-title'>Shop Each Department For your Style</h3>
@@ -13,7 +13,7 @@ const InventoryItems = () => {
            {
            
           products.map(product => <Items key={product._id}
-          product={product}></Items>)
+          product={product}></Items> )
         
            }
         </div>
