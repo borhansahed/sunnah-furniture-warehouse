@@ -19,8 +19,8 @@ const Banner = () => {
     />
     <Carousel.Caption>
       {/* <h1 className='fst-italic fw-bold banner-title fs-xl'>Bassett</h1> */}
-      <h2>20% OFF FOR YOUR FAMILY</h2>
-      <p>ENJOY THIS EID</p>
+      <h2 className='caption-title'>20% OFF FOR YOUR FAMILY</h2>
+      <p className='caption-subtitle'>ENJOY THIS EID</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -31,8 +31,8 @@ const Banner = () => {
     />
 
     <Carousel.Caption>
-    <h2>30% OFF BUY ONE GET TWO</h2>
-      <p>ENJOY THIS EID</p>
+    <h2 className='caption-title'>30% OFF BUY ONE GET TWO</h2>
+      <p className='caption-subtitle'>ENJOY THIS EID</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -43,8 +43,8 @@ const Banner = () => {
     />
 
     <Carousel.Caption>
-    <h2>60% OFF HURRY UP</h2>
-      <p>ENJOY THIS EID</p>
+    <h2 className='caption-title'>60% OFF HURRY UP</h2>
+      <p className='caption-subtitle'>ENJOY THIS EID</p>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
