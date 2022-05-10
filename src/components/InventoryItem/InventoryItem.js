@@ -17,18 +17,28 @@ const InventoryItems = () => {
         <div className='product-detail-container'>
         <div className='product-detail'>
      <img className='' src={picture} alt="" />
-     <h4 className='mt-3 '>{name}</h4>
+   <div className='product-detail-title'>
+   <h4 className='mt-3 '>{name}</h4>
      
      
      <p>{description}</p>
-     <p>Quantity :{Quantity}</p>
-     <h4 className='mb-2 '>${price}</h4>
+     
+     
+    
+     <h6 >Supplier : {Supliername}</h6>
+ <p>Quantity : {Quantity}</p>
+<h4 className='mb-2 '>${price}</h4>
+   </div>
 
-     <h6 >Suplier : {Supliername}</h6>
-
-     <button className='btn btn-outline-dark  inventory-product-btn' >Delivered</button>
-     <button className='btn btn-outline-dark  inventory-product-btn' >Order</button>
-     {/* <h5 className='product-title '>{name}</h5> */}
+   <div className=' product-details-btn '>
+     {/* <div className='product-details-btn-one'> */}
+        <button className='btn btn-outline-dark ' >Delivered</button>
+     
+  
+    <button className='btn btn-outline-dark ' >Order</button>
+  
+     
+   </div>
        </div>
        </div>
       
