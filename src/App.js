@@ -7,7 +7,7 @@ import Home from './components/Home/Home'
 import Login from './components/Login/Login'
 import Register from './components/Register/Register';
 import RequireAuth from './components/RequireAuth/RequireAuth'
-import InventoryItems from './components/InventoryItems/InventoryItems'
+import InventoryItem from './components/InventoryItem/InventoryItem'
 import NotFound from './components/NotFound/NotFound';
 import ManageInventory from './components/ManageInventory/ManageInventory';
 import MyItems from './components/MyItems/MyItems';
@@ -32,6 +32,7 @@ function App() {
     <Inventory></Inventory>
    </RequireAuth>
  }></Route>
+ <Route path='/inventory/:id' element={<InventoryItem></InventoryItem>}></Route>
   <Route path='*' element={<NotFound></NotFound>}></Route>
  
   </Routes>

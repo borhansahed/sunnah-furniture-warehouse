@@ -1,11 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import './InventoryItems.css'
 
 const InventoryItems = ({product}) => {
+ const {name ,description , picture , price , _id }=product;
+ const navigate = useNavigate();
+    const ProductDetail = () => {
+      const path = `/inventory/${_id}`;
+      navigate(path);
+    }
     
-    const {name ,description , picture , Quantity ,Supliername ,price }=product;
+   
     return (
         <div className=''>
          <div className='inventory-product'>
@@ -14,10 +20,10 @@ const InventoryItems = ({product}) => {
       
       <p>{description.slice(0,110)} ... <Link to={'/myitems'}>See more</Link></p>
       <h4 className='mb-2 '>${price}</h4>
-      
+ 
       
 
-      <button className='btn btn-outline-dark w-100  inventory-product-btn' ><Link to={'/inventory'}>update</Link> </button>
+      <button onClick={ProductDetail} className='btn btn-outline-dark w-100  inventory-product-btn' >update</button>
       {/* <h5 className='product-title '>{name}</h5> */}
         </div>
         </div>
