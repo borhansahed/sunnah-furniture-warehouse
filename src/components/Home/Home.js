@@ -4,6 +4,7 @@ import EidSpeicial from '../EidSpeicial/EidSpeicial';
 import Items from '../Items/Items';
 import InventoryItems from '../InventoryItems/InventoryItems';
 import SecondBanner from '../SecondBanner/SecondBanner';
+import HomeProduct from '../HomeProuduct/HomeProduct';
 
 const Home = () => {
     return (
@@ -11,7 +12,7 @@ const Home = () => {
         <Banner></Banner>
         <EidSpeicial></EidSpeicial>
        
-       <InventoryItems></InventoryItems>
+    <HomeProduct></HomeProduct>
        <SecondBanner></SecondBanner>
         </div>
     );

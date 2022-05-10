@@ -12,6 +12,7 @@ import NotFound from './components/NotFound/NotFound';
 import ManageInventory from './components/ManageInventory/ManageInventory';
 import MyItems from './components/MyItems/MyItems';
 import AddItems from './components/AddItems/AddItems';
+import Inventory from './components/Inventory/Inventory';
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
  <Route path='/additems' element={<AddItems></AddItems>}></Route>
  <Route path='/inventory' element={
    <RequireAuth>
-     <InventoryItems></InventoryItems>
+    <Inventory></Inventory>
    </RequireAuth>
  }></Route>
   <Route path='*' element={<NotFound></NotFound>}></Route>
