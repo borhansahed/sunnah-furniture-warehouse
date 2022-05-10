@@ -31,11 +31,13 @@ const InventoryItems = () => {
    </div>
 
    <div className=' product-details-btn '>
-     {/* <div className='product-details-btn-one'> */}
-        <button className='btn btn-outline-dark ' >Delivered</button>
+     {/* <div className='-one'> */}
+      {
+          Quantity === 0 ?   <button className='btn btn-outline-dark  '  disabled>Sold out</button> :   <button className='btn btn-outline-dark w-25 ml-3' >Delivered</button>
+      }
      
   
-    <button className='btn btn-outline-dark ' >Order</button>
+    <button className='btn btn-outline-dark  w-25 order-btn' >Order</button>
   
      
    </div>

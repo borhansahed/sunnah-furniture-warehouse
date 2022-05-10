@@ -18,12 +18,14 @@ const InventoryItems = ({product}) => {
       <img className='' src={picture} alt="" />
       <h4 className='mt-3 '>{name}</h4>
       
-      <p>{description.slice(0,110)} ... <Link to={'/myitems'}>See more</Link></p>
+      <p>{description.slice(0,110)} ... <span onClick={ProductDetail}>See more</span></p>
       <h4 className='mb-2 '>${price}</h4>
  
       
 
-      <button onClick={ProductDetail} className='btn btn-outline-dark w-100  inventory-product-btn' >update</button>
+     <div className='product-details-btn'>
+     <button onClick={ProductDetail} className='btn btn-outline-dark w-100  inventory-product-btn ' >update</button>
+     </div>
       {/* <h5 className='product-title '>{name}</h5> */}
         </div>
         </div>

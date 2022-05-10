@@ -2,6 +2,7 @@
     width: 600px;
     margin: 4rem auto;
     color: rgb(71, 71, 71);
+    position: relative;
 }
 .product-detail img{
     width: 80%;
@@ -16,8 +17,34 @@
 .product-detail-title h6{
     margin-bottom: 4px;
 }
-.product-detail-btn {
-  
+.order-btn {
+  position: absolute;
+  left: 52%;
    
-   
+}
+@media screen and (max-width:668px) {
+
+    /* .product-detail img{
+        width: 45%;
+        
+    } */
+    .product-detail-container{
+        width: 350px;
+        margin: 3rem auto;
+        
+    }
+    .product-detail-title p{
+        font-size: 0.9rem;
+        width: 270px;
+        
+    }
+    .product-detail-title h6{
+        font-size: 0.9rem;
+    }
+    .product-details-btn button{
+        font-size: 0.8rem ;
+    }
+    .product-detail h4{
+       font-size: 1.2rem;
+    }
 }

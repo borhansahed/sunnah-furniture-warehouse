@@ -30,6 +30,10 @@
       
          left: 3%;
     }
+    .second-banner-title button{
+      
+       font-size: 0.6rem;
+    }
     .second-banner-title h3{
        font-size: 0.8rem;
        

@@ -13,7 +13,9 @@ const SecondBanner = () => {
      <h3> Make the most of your time.</h3>
             <h4>Book a virtual design appointment or a<br />private in-store meeting today.Either way, <br />you'll get personal attention,expert design <br />assistance,and someone to help you get <br />  started with that project.</h4>
             
-            <Button variant='banner-btn btn btn-outline-light  text-dark '>  <Link to={'/inventory'} className='fst-italic '>Book Now</Link> </Button>
+          
+          <Button variant='banner-btn btn btn-outline-light  text-dark '>  <Link to={'/inventory'} className='fst-italic '>Book Now</Link> </Button>
+         
              
 </div>
            

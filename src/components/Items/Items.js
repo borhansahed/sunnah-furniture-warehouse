@@ -9,7 +9,9 @@ const Items = ({product}) => {
         <div className='product'>
       <img className='' src={picture} alt="" />
       
-      <button className='btn btn-outline-light  product-btn' ><Link to={'/inventory'}>{name}</Link> </button>
+     <div className='product-details-btn'>
+     <button className='btn btn-outline-light  product-btn' ><Link to={'/inventory'}>{name}</Link> </button>
+     </div>
       {/* <h5 className='product-title '>{name}</h5> */}
         </div>
     );

@@ -13,6 +13,7 @@ import ManageInventory from './components/ManageInventory/ManageInventory';
 import MyItems from './components/MyItems/MyItems';
 import AddItems from './components/AddItems/AddItems';
 import Inventory from './components/Inventory/Inventory';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -36,7 +37,7 @@ function App() {
   <Route path='*' element={<NotFound></NotFound>}></Route>
  
   </Routes>
-  
+  <Footer></Footer>
   
     </>
     
