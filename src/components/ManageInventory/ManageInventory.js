@@ -8,7 +8,7 @@ const ManageInventory = () => {
     const [items] = UseItems();
     return (
         <>
-     <p>{items.length}</p>
+    
       
 
         <div>

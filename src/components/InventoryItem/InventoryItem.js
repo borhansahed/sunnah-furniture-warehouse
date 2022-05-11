@@ -46,8 +46,21 @@ const InventoryItems = () => {
 
      
      const handleDelivered = () => {
-         const QuantityPlus = hello -1;
-         setHello(QuantityPlus);
+        const currentQuantity = parseInt(Quantity) - 1;
+        const UpdateQuantity = {Quantity : currentQuantity};
+   
+        const url =`http://localhost:5000/inventory/${id}`;
+   
+        fetch(url ,{
+          method:'PUT',
+          headers:{
+              'content-type': 'application/json'
+          },
+          body: JSON.stringify(UpdateQuantity)
+   
+        })
+        .then(res =>res.json())
+        .then(data =>console.log(data));
      }
      
 
@@ -81,7 +94,7 @@ const InventoryItems = () => {
    <div className=' product-details-btn '>
      {/* <div className='-one'> */}
       {
-          hello === 0 ?   <button className='btn btn-outline-dark  '  disabled>Sold out</button> :   <button onClick={handleDelivered} className='btn btn-outline-dark w-25 ml-3' >Delivered</button>
+          Quantity === 0 ?   <button className='btn btn-outline-dark  '  disabled>Sold out</button> :   <button onClick={handleDelivered} className='btn btn-outline-dark w-25 ml-3' >Delivered</button>
       }
      
   
