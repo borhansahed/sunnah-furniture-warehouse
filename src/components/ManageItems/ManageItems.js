@@ -1,8 +1,26 @@
 import React from 'react';
+import UseItems from '../../Hooks/UseItems';
 import './ManageItems.css'
 
-const ManageItems = ({item}) => {
-    const {name ,Quantity , price ,Supliername , picture}=item;
+const ManageItems = ({item , handleDelete}) => {
+    const {name ,Quantity , price ,Supliername , picture , _id}=item;
+    const [items,setItems]=UseItems()
+
+    // const handleDelete = (id) =>{
+    //     const proceed = window.confirm('Are you sure');
+    //     if (proceed){
+    //        const url = `http://localhost:5000/items/${id}`;
+    //        fetch(url , {
+    //            method:'DELETE'
+    //        })
+    //        .then(res =>res.json())
+    //        .then(data =>{
+    //            console.log(data)
+    //            const remaining = items.filter(item => item._id !== id)
+    //            setItems(remaining);
+    //        })
+    //     };
+    // }
     return (
        <>
     <table className='c'>
@@ -33,7 +51,12 @@ const ManageItems = ({item}) => {
               <td> {price}</td>
               <td> {Quantity}</td>
               <td> {Supliername}</td>
+             <div className='table-btn'>
+             <button className='btn btn-outline-dark'>Add new item</button>
+              <button onClick={() => handleDelete(_id)} className='btn btn-outline-dark '>Delete</button>
+             </div>
           </tr>
+
         </tbody>
     </table>
    

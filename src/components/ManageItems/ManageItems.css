@@ -14,4 +14,7 @@ table.c {
     table-layout: auto;
     width: 100%;  
   }
+  .table-btn button{
+    margin-left: 1rem;
+  }
   

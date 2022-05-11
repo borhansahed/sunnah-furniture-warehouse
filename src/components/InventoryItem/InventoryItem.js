@@ -5,7 +5,7 @@ import './InventoryItem.css';
 const InventoryItems = () => {
     const {id} = useParams();
     const [product , setProduct] = useState({});
-    const [hello , setHello] = useState(1);
+   
 
 
 
@@ -24,7 +24,7 @@ const InventoryItems = () => {
    
         })
         .then(res =>res.json())
-        .then(data =>console.log(data));
+        .then(data => data);
    
            //  const QuantityPlus = hello +1;
            //  setHello(QuantityPlus);
@@ -60,7 +60,7 @@ const InventoryItems = () => {
    
         })
         .then(res =>res.json())
-        .then(data =>console.log(data));
+        .then(data => data);
      }
      
 
@@ -88,13 +88,13 @@ const InventoryItems = () => {
      <h6 >Supplier : {Supliername}</h6>
  <p>Quantity : {Quantity}</p>
 <h4 className='mb-2 '>${price}</h4>
-<h5>{hello}</h5>
+
    </div>
 
    <div className=' product-details-btn '>
      {/* <div className='-one'> */}
       {
-          Quantity === 0 ?   <button className='btn btn-outline-dark  '  disabled>Sold out</button> :   <button onClick={handleDelivered} className='btn btn-outline-dark w-25 ml-3' >Delivered</button>
+          Quantity === 0 ?   <button className='btn btn-outline-dark w-25 '  disabled>Sold out</button> :   <button onClick={handleDelivered} className='btn btn-outline-dark w-25 ml-3' >Delivered</button>
       }
      
   
