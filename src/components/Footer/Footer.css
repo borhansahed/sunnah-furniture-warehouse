@@ -1,0 +1,40 @@
+
+.footer-main-container{
+    display: flex;
+    align-items: center;
+   
+  
+    
+}
+.footer-container{
+    width: 1500px;
+    display: flex;
+    justify-content: center;
+    gap: 0px 5rem;
+    margin-top: 3rem;
+   
+   
+}
+.footer-container p{
+    line-height: 0.5rem;
+
+}
+.footer-container h6{
+font-weight: 500;
+
+}
+.social-container{
+    /* margin-top: 7rem; */
+}
+.social-container h4{
+    font-weight: 500;
+}
+.social-icons{
+    display: flex;
+    gap: 0px 1rem;
+    font-size: 2.5rem;
+}
+.footer{
+    padding: 0.8rem 0px ;
+    background-color: lightgray;
+}
