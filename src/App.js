@@ -15,6 +15,7 @@ import AddItems from './components/AddItems/AddItems';
 import Inventory from './components/Inventory/Inventory';
 import Footer from './components/Footer/Footer';
 import Blogs from './components/Blogs/Blogs';
+import About from './components/About/About';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
  <Route path='/register' element={<Register></Register>}></Route>
  <Route path='/manageinventory' element={<ManageInventory></ManageInventory>}></Route>
  <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+ <Route path='/about' element={<About></About>}></Route>
  
  <Route path='/additems' element={<AddItems></AddItems>}></Route>
  

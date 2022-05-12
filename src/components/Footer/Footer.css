@@ -38,3 +38,17 @@ font-weight: 500;
     padding: 0.8rem 0px ;
     background-color: lightgray;
 }
+@media screen and (max-width:668px) {
+    .footer-main-container{
+       flex-direction: column;
+       
+      
+        
+    }
+    .footer-container{
+       flex-direction: column;
+       
+    }
+
+    
+}

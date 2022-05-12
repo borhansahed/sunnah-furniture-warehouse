@@ -1,5 +1,5 @@
-import React, { createContext, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, {  useState } from 'react';
+
 import UseItems from '../../Hooks/UseItems';
 import ManageItems from '../ManageItems/ManageItems';
 import MyItems from '../MyItems/MyItems';
@@ -7,7 +7,7 @@ import MyItems from '../MyItems/MyItems';
 import './ManageInventory.css';
 
 
-export const ItemContext = createContext('item');
+
 
 const ManageInventory = () => {
     const [items , setItems] = UseItems();
@@ -15,12 +15,12 @@ const ManageInventory = () => {
     console.log(myItems);
 
     // console.log(items[0].Quantity)
-    const navigate = useNavigate();
-        const sahed = 'sahed';
+   
+        
     const handleDelete = id =>{
         const proceed = window.confirm('Are you sure');
          if(proceed){
-            const url = `http://localhost:5000/items/${id}`;
+            const url = `https://lit-earth-64208.herokuapp.com/items/${id}`;
             fetch(url , {
                 method:'DELETE'
             })
@@ -37,15 +37,21 @@ const ManageInventory = () => {
    
     const addToItem = (product) => {
         let newCart = []
-        // const exist =myItems.find((singleProduct)=> {return singleProduct.id === product.id})
+        const exist =myItems.find((singleProduct)=> {return singleProduct._id === product._id})
         // console.log(findSameProduct)
+        if(!exist){
+              newCart = [...myItems , product];
+        }
+        else{
+            return alert('already added')
+        }
        
-         newCart = [...myItems , product];
+       
        
        setMyItems(newCart);
      }
      const removeItem = (item) => {
-      const rest = myItems.filter(pd => pd.id !== item.id);
+      const rest = myItems.filter(pd => pd._id !== item._id);
     setMyItems(rest);
     
    
@@ -58,7 +64,7 @@ const ManageInventory = () => {
       
               <>
     
-        <ItemContext.Provider value={sahed}>
+      
 
     <div>
 
@@ -70,17 +76,17 @@ const ManageInventory = () => {
 
        
     </div>
-    {/* <div>
+    <div>
       
         {
 
            myItems.map(myItem => <MyItems key={myItem._id}
            myItem={myItem} removeItem={removeItem}></MyItems> )
         }
-    </div> */}
-    <MyItems></MyItems>
+    </div>
+    
 
-      </ItemContext.Provider>
+     
     </>
     
       
