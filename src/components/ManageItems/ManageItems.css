@@ -26,4 +26,22 @@ table.c {
   .table-btn button{
     margin-left: 1rem;
   }
+  @media screen and (max-width:668px) {
+
+    td img {
+      width: 10vh;
+  }
+  table.c {
+    table-layout: auto;
+    width: 20%;  
+  }
+  .table-btn button{
+   font-size: 0.6rem;
+  }
+  th,td {
+    height: 1rem;
+    font-size: 0.8rem;
   
+  }
+    
+  }
