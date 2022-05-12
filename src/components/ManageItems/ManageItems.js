@@ -1,10 +1,10 @@
 import React from 'react';
-import UseItems from '../../Hooks/UseItems';
+
 import './ManageItems.css'
 
-const ManageItems = ({item , handleDelete}) => {
+const ManageItems = ({item , handleDelete ,addToItem}) => {
     const {name ,Quantity , price ,Supliername , picture , _id}=item;
-    const [items,setItems]=UseItems()
+    
 
     // const handleDelete = (id) =>{
     //     const proceed = window.confirm('Are you sure');
@@ -22,7 +22,7 @@ const ManageItems = ({item , handleDelete}) => {
     //     };
     // }
     return (
-       <>
+       < div className='table-container'>
     <table className='c'>
         <thead>
           <tr>
@@ -52,7 +52,7 @@ const ManageItems = ({item , handleDelete}) => {
               <td> {Quantity}</td>
               <td> {Supliername}</td>
              <div className='table-btn'>
-             <button className='btn btn-outline-dark'>Add new item</button>
+             <button onClick={()=> addToItem(item)} className='btn btn-outline-dark'>Add to item</button>
               <button onClick={() => handleDelete(_id)} className='btn btn-outline-dark '>Delete</button>
              </div>
           </tr>
@@ -63,7 +63,7 @@ const ManageItems = ({item , handleDelete}) => {
    
    
   
-       </>
+       </ div>
     );
 };
 

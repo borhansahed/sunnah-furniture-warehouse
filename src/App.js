@@ -24,18 +24,20 @@ function App() {
   <Routes>
  <Route path='/' element={<Home></Home>}></Route>
  <Route path='/home' element={<Home></Home>}></Route>
- <Route path='/login' element={<Login></Login>}></Route>
- <Route path='/register' element={<Register></Register>}></Route>
- <Route path='/manageinventory' element={<ManageInventory></ManageInventory>}></Route>
- <Route path='/blogs' element={<Blogs></Blogs>}></Route>
- <Route path='/myitems' element={<MyItems></MyItems>}></Route>
- <Route path='/additems' element={<AddItems></AddItems>}></Route>
  <Route path='/inventory' element={
    <RequireAuth>
     <Inventory></Inventory>
    </RequireAuth>
  }></Route>
+ <Route path='/login' element={<Login></Login>}></Route>
+ <Route path='/register' element={<Register></Register>}></Route>
+ <Route path='/manageinventory' element={<ManageInventory></ManageInventory>}></Route>
+ <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+ 
+ <Route path='/additems' element={<AddItems></AddItems>}></Route>
+ 
  <Route path='/inventory/:id' element={<InventoryItem></InventoryItem>}></Route>
+ <Route path='/myitems' element={<MyItems></MyItems>}></Route>
   <Route path='*' element={<NotFound></NotFound>}></Route>
  
   </Routes>

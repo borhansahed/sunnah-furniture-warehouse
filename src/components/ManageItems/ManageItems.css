@@ -1,10 +1,19 @@
-
+.table-container{
+  width: 1400px;
+  margin: 3rem auto;
+ 
+}
 table {
     border-collapse: collapse;
     border: 1px solid black;
+    
   } 
   
   th,td {
+    height: 4rem;
+    
+  align-items: center;
+    border-collapse: collapse;
     border: 1px solid black;
   }
 td img {

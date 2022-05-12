@@ -1,0 +1,8 @@
+.blogs-container{
+    width: 1000px;
+    margin: 3rem auto;
+}
+.blogs-container h5{
+    width: 800px;
+    text-align: justify;
+}
