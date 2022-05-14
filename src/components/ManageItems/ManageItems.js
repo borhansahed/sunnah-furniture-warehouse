@@ -5,6 +5,7 @@ import './ManageItems.css'
 const ManageItems = ({item , handleDelete ,addToItem}) => {
     const {name ,Quantity , price ,Supliername , picture , _id}=item;
     
+    
 
     // const handleDelete = (id) =>{
     //     const proceed = window.confirm('Are you sure');
@@ -53,6 +54,7 @@ const ManageItems = ({item , handleDelete ,addToItem}) => {
               <td> {Supliername}</td>
              <div className='table-btn'>
              <button onClick={()=> addToItem(item)} className='btn btn-outline-dark'>Add to item</button>
+           
               <button onClick={() => handleDelete(_id)} className='btn btn-outline-dark '>Delete</button>
              </div>
           </tr>

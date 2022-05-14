@@ -5,17 +5,27 @@ import './InventoryItem.css';
 const InventoryItems = () => {
     const {id} = useParams();
     const [product , setProduct] = useState({});
+    const [input , setInput] = useState(0);
    
-
-
+   
+   const handleInput = event=>{
+   
+     
+   setInput(event.target.value)
+   
+  
+   };
+  
   //   = (event) =>{
   //      const item = event.target.value;
   //      console.log(item)
   // }
     const handleOrder = (event)=> {
+      const orderQuantity = parseInt( input);
+      
      
-        const currentQuantity = parseInt(Quantity) + 1 ;
-        const UpdateQuantity = {Quantity : currentQuantity};
+        const currentQuantity = parseInt(Quantity);
+        const UpdateQuantity = {Quantity : currentQuantity + orderQuantity};
    
         const url =`https://lit-earth-64208.herokuapp.com/inventory/${id}`;
    
@@ -29,6 +39,7 @@ const InventoryItems = () => {
         })
         .then(res =>res.json())
         .then(data => data);
+        alert('Update successfully')
    
            //  const QuantityPlus = hello +1;
            //  setHello(QuantityPlus);
@@ -50,6 +61,7 @@ const InventoryItems = () => {
 
      
      const handleDelivered = () => {
+       
         const currentQuantity = parseInt(Quantity) - 1;
         const UpdateQuantity = {Quantity : currentQuantity};
    
@@ -65,6 +77,7 @@ const InventoryItems = () => {
         })
         .then(res =>res.json())
         .then(data => data);
+        alert('Update successfully')
      }
      
 
@@ -100,6 +113,8 @@ const InventoryItems = () => {
       {
           Quantity === 0 ?   <button className='btn btn-outline-dark w-25 '  disabled>Sold out</button> :   <button onClick={handleDelivered} className='btn btn-outline-dark w-25 ml-3' >Delivered</button>
       }
+
+      <input onBlur={handleInput} className='w-25' type="number" name="number" id="" />
    
      <button onClick={handleOrder} className='btn btn-outline-dark  w-25 order-btn'  >  Order  </button>
       

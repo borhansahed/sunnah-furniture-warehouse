@@ -17,6 +17,10 @@
 .product-detail-title h6{
     margin-bottom: 4px;
 }
+.product-details-btn input{
+    margin-left: 5px;
+    margin-top: 5px;
+}
 .order-btn {
   position: absolute;
   left: 52%;
