@@ -2,6 +2,7 @@
 .footer-main-container{
     display: flex;
     align-items: center;
+    margin-bottom: 1.5rem;
    
   
     
@@ -40,14 +41,36 @@ font-weight: 500;
 }
 @media screen and (max-width:668px) {
     .footer-main-container{
-       flex-direction: column;
+       margin-bottom: 0;
        
       
         
     }
     .footer-container{
+        /* margin: 0;
        flex-direction: column;
+      align-items: center;
+      gap: 2rem 0px; */
+      display: none;
        
+    }
+    .social-container{
+        margin: 1.2rem auto;
+    }
+    .social-container h4{
+        font-size: 1rem;
+    }
+    .social-container button{
+       font-size: 0.7rem;
+    }
+    .social-container input{
+       font-size: 0.8rem;
+    }
+    small{
+        font-size: 0.7rem;
+    }
+    .social-icons{
+        font-size: 1.7rem;
     }
 
     
