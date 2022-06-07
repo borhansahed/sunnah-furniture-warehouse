@@ -9,11 +9,13 @@ https://warehouse-25088.web.app/
 
 
 
-## Website Features 
- 
-   * On this website, users can create an account using email password or Google sing-in
-   * A user can add products and manage products and delete them one by one item
-   * A user can manage product quantity, add products, and give contact information
+## Website Features
+
+  * It has admin and users role 
+  * It has a stripe payment method
+  * After payment order status will be paid Delivery status will be pending
+  * Users can order items and also they submit a review
+  * Admin users manage all products and orders and also add products
      
 
 
