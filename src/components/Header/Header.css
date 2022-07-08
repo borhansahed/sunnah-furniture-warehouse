@@ -9,6 +9,9 @@
     
 
 }
+.menu{
+   display: none;
+}
 .header-title{
     margin: 2.5rem 0px;
     margin-left: 5rem;
@@ -17,6 +20,10 @@
 }
 .header-title h1{
    margin-top: 0;
+}
+
+.header-main-title p{
+   margin-bottom: 0;
 }
 .header-container a{
     text-decoration: none;
@@ -29,26 +36,74 @@
 .header-links{
    margin-right: 25rem;
 }
+.hamburger-menu{
+   display: none;
+
+}
 @media screen and (max-width:668px) {
 
    .header-title{
-      
+      display: flex;
+      gap: 10px 115px;
       margin-left: 0rem;
      
   }
+  .header-main-title p{
+   font-size: 13px;
+   margin-left: 30px;
+  }
+  .header-main-title h1{
+   font-size: 28px;
+  
+  }
+
+  .menu{
+   display: block;
+   font-size: 25px;
+   margin-left: 12px;
+   margin-top: 6px;
+ 
+  }
    .header-container{
-      margin-bottom: 2.2rem;
+      display: none;
+   }
+   .hamburger-menu {
+      background-color: white;
+      padding: 20px;
+   }
+   .hamburger-menu a{
+      text-decoration: none;
     
-        flex-direction: column;
-        gap: 2rem;
-    
+  
+   font-weight: 500;
+   
+   color: rgb(71, 71, 71);
+  }
+   .hamburger-menu a:hover{
+   
+   
+   color: black;
+  }
+   .header-title{
+    margin-bottom: 0rem;
     }
     
     .header-links{
        display: flex;
        flex-direction: column;
        margin-right: 0px;
+       gap:3px 0;
        
+    }
+    .header-links2{
+       display: flex;
+       flex-direction: column;
+       gap:3px 0;
+       margin-right: 0px;
+       
+    }
+    .hamburger-menu{
+      display: block;
     }
    
 }
