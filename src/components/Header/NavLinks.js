@@ -11,7 +11,7 @@ const NavLinks = () => {
         signOut(auth);
     }
     return (
-       <>
+       <div className='header-links-container'>
        <div className='header-links'>
                 <Link to="/home">Home</Link>
                 <Link to="/inventory">Inventory</Link>
@@ -35,7 +35,7 @@ const NavLinks = () => {
   
              </div>
                  
-       </>
+       </div>
     );
 };
 

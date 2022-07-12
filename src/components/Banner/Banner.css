@@ -6,6 +6,11 @@
     height: 800px;
    
 }
+.banner-container{
+   
+ margin-top: 2rem;
+   
+}
 .banner-title{
  position: absolute;
  top: -500%;

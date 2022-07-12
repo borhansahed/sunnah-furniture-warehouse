@@ -5,7 +5,7 @@ const Blogs = () => {
 
         <>
         
-        <div className='blogs-container'>
+        <div className='blogs-container '>
             <h3>Difference between javascript and nodejs ?</h3>
             <h5>JavaScript is a simple programming language that runs in any browser JavaScript Engine. Whereas Node JS is an interpreter or running environment for a JavaScript programming language that holds many excesses, it requires libraries that can easily be accessed from JavaScript programming for better use.</h5>
             <h3>When should you use nodejs and when should you use mongodb ?</h3>

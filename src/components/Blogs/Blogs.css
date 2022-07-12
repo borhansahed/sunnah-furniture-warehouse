@@ -6,3 +6,19 @@
     width: 800px;
     text-align: justify;
 }
+
+@media screen and (max-width:668px) {
+
+    .blogs-container{
+        width: 300px;
+        margin:2rem auto;
+    }
+
+   .blogs-container h3{
+    font-size: 15px;
+}
+.blogs-container h5{
+    width: 300px;
+   font-size: 13px;
+} 
+}

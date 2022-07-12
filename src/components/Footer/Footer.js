@@ -78,7 +78,10 @@ const Footer = () => {
                     </div>
 
                 </div>
-                <p className='text-center'><small>Copyright © 2003-2022 Sunnah Furniture Industries. All Rights Reserved.</small></p>
+                <div className='copyRight-title'>
+                     <p className='text-center'><small>Copyright © 2003-2022 Sunnah Furniture Industries. All Rights Reserved.</small></p>
+                </div>
+               
             </div>
 
         </>
