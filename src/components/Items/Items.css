@@ -21,13 +21,8 @@
 
 }
 @media screen and (max-width:668px) {
-    .product-btn {
-        position: absolute;
-       top: 40%;
-       left: 20%;
-     
-       
-      
-      
-      }
+  .homeButton button{
+    font-size: 10px;
+  } 
+    
 }

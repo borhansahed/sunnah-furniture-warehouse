@@ -21,8 +21,9 @@
    
         
         grid-template-columns: repeat( 1 , 1fr);
-        max-width: 370px;
-        margin-left: 85px;
+        max-width: 350px;
+        align-items: center;
+        margin-left: 65px;
        
          
     }

@@ -1,8 +1,6 @@
-import { signOut } from 'firebase/auth';
+
 import React, { useRef, useState } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
-import auth from '../firebase-init';
 import { HiOutlineMenuAlt2} from "@react-icons/all-files/hi/HiOutlineMenuAlt2";
 import './Header.css'
 import NavLinks from './NavLinks';
@@ -40,8 +38,9 @@ const Header = () => {
                 <HiOutlineMenuAlt2></HiOutlineMenuAlt2>
                </div>
                <div className='header-main-title'>
+                <Link className='' to="/">
                    <p className='fst-italic'> <small>since 1900</small> 
-               </p><span><h1 className=' fst-italic fw-bold' >Sunnah</h1></span>
+               </p><span><h1 className=' fst-italic fw-bold' >Sunnah</h1></span></Link>
                </div>
             
                

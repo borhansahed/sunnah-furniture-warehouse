@@ -28,13 +28,13 @@
 }
 @media screen and (max-width:668px) {
 
-    /* .product-detail img{
-        width: 45%;
+    .product-detail img{
+        width: 50%;
         
-    } */
+    }
     .product-detail-container{
-        width: 350px;
-        margin-left: 90px;
+        width: 340px;
+        margin-left: 70px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -42,15 +42,18 @@
         
     }
     .product-detail-title p{
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         width: 270px;
         
     }
     .product-detail-title h6{
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
+    
     .product-details-btn button{
-        font-size: 0.8rem ;
+        margin-top: 12px;
+        font-size: 0.7rem ;
+        
     }
     .product-detail h4{
        font-size: 1.2rem;
