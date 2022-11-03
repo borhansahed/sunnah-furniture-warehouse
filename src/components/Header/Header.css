@@ -1,12 +1,16 @@
 .header-container{
   margin-bottom: 2.2rem;
 
-    display: flex;
+   
+    
+
+}
+.header-links-container{
+ display: flex;
     justify-content:center;
     align-items: center;
     cursor: pointer;
     gap: 15rem;
-    
 
 }
 .hamburger-menu{
@@ -109,15 +113,19 @@
        margin-right: 0px;
        gap:3px 0;
        
+       
     }
     .header-links2{
        display: flex;
        flex-direction: column;
        gap:3px 0;
-       margin-right: 0px;
+       margin-right: 45px;
        
     }
     .header-links-container{
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
       background-color: white;
       padding: 40px;
       border-radius: 8px;

@@ -24,7 +24,7 @@ const InventoryItems = ({product}) => {
       
 
      <div className='product-details-btn'>
-     <button onClick={ProductDetail} className='btn btn-outline-dark w-100  inventory-product-btn ' >update</button>
+     <button onClick={ProductDetail} className='btn btn-outline-dark lg:w-96  inventory-product-btn ' >update</button>
      </div>
       {/* <h5 className='product-title '>{name}</h5> */}
         </div>

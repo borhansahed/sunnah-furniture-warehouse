@@ -1,21 +1,49 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
+import auth from '../firebase-init';
+import './AddItems.css'
 
 const AddItems = () => {
+   const [user] = useAuthState(auth);
+   const navigate = useNavigate();
    const { register, handleSubmit } = useForm();
+   const email = user?.email;
   const onSubmit = data => {
+    const {name,price , picture, Supliername,Quantity, description} = data;
+    const num = parseInt(Quantity)
+    const mainData = {
+         name:name,
+         price:price,
+         picture: picture,
+         Supliername:Supliername,
+         email: email,
+         Quantity: num,
+         description:description
+         
+    }
+
      const url = `https://lit-earth-64208.herokuapp.com/items`;
      fetch(url , {
         method:'POST',
         headers:{
            'content-type': 'application/json'
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(mainData)
      })
      .then(res=>res.json())
      .then(data =>{
-        console.log(data)
+        if(data.acknowledged === true){
+         toast.success("Successfully added");
+         setTimeout(()=>{
+           navigate('/')
+         },1000)
+        }else{
+         toast.error("Adding failed")
+        }
      })
     
   };
@@ -24,18 +52,23 @@ const AddItems = () => {
        <>
         <div>
         
-        <div className='login-container mb-5'>
-        <h3 className='text-center'>Add Your Item</h3>
+        <div className='login-container mb-5 mt-12 lg:mt-8'>
+        <h3 className='text-center text-xl mt-10 lg:text-2xl'>Add Your Item</h3>
       <div   className='mx-auto'>
       <Form onSubmit={handleSubmit(onSubmit)} className=' form-container ' >
 <Form.Group className="mb-3" controlId="formBasicEmail">
 <Form.Label>name</Form.Label>
-<Form.Control type="text" placeholder="Enter Name" {... register ("name" , {required : true , maxLength: 20})}  />
+<Form.Control type="text" placeholder="item name" {... register ("name" , {required : true , maxLength: 50})}  />
+
+</Form.Group>
+<Form.Group className="mb-3" controlId="formBasicEmail">
+<Form.Label>description</Form.Label>
+<Form.Control type="text" placeholder="About item" {... register ("description" , {required : true })} required  />
 
 </Form.Group>
 <Form.Group className="mb-3" controlId="formBasicEmail">
 <Form.Label>img</Form.Label>
-<Form.Control  type="text" placeholder="link" {... register ("picture" , {required : true })}/>
+<Form.Control  type="url" placeholder="link" {... register ("picture" , {required : true })}/>
 
 </Form.Group>
 <Form.Group className="mb-3" controlId="formBasicEmail">

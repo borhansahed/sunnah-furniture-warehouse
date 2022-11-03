@@ -1,27 +1,26 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import toast from 'react-hot-toast';
+import {  useParams } from 'react-router-dom';
 import './InventoryItem.css';
 
 const InventoryItems = () => {
     const {id} = useParams();
     const [product , setProduct] = useState({});
+  
    
    
    
    
   
-  //   = (event) =>{
-  //      const item = event.target.value;
-  //      console.log(item)
-  // }
-    const handleOrder = (event)=> {
+  
+    const handleOrder = ()=> {
       
       
      
         const currentQuantity = parseInt(Quantity) + 1;
         const UpdateQuantity = {Quantity : currentQuantity};
    
-        const url =`https://lit-earth-64208.herokuapp.com/inventory/${id}`;
+        const url =`https://lit-earth-64208.herokuapp.com/items/${id}`;
    
         fetch(url ,{
           method:'PUT',
@@ -32,21 +31,17 @@ const InventoryItems = () => {
    
         })
         .then(res =>res.json())
-        .then(data => data);
-        alert('Update successfully')
-   
-           //  const QuantityPlus = hello +1;
-           //  setHello(QuantityPlus);
+        .then(data =>{
+          if(data.modifiedCount > 0){
+             toast.success('Update successfully')
+          }else{
+            toast.error("Update Unsuccessful")
+          }
+        });
         }
-        
-
-
-
-
-
-    
+ 
     useEffect(()=>{
-        const url =`https://lit-earth-64208.herokuapp.com/inventory/${id}`;
+        const url =`https://lit-earth-64208.herokuapp.com/items/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data =>setProduct(data));
@@ -59,7 +54,7 @@ const InventoryItems = () => {
         const currentQuantity = parseInt(Quantity) - 1;
         const UpdateQuantity = {Quantity : currentQuantity};
    
-        const url =`https://lit-earth-64208.herokuapp.com/inventory/${id}`;
+        const url =`https://lit-earth-64208.herokuapp.com/items/${id}`;
    
         fetch(url ,{
           method:'PUT',
@@ -70,8 +65,15 @@ const InventoryItems = () => {
    
         })
         .then(res =>res.json())
-        .then(data => data);
-        alert('Update successfully')
+        .then(data =>{
+          if(data.modifiedCount > 0){
+             toast.success('Update successfully')
+          }else{
+            toast.error("Update Unsuccessful")
+          }
+        });
+       
+       
      }
      
 
@@ -105,12 +107,12 @@ const InventoryItems = () => {
    <div  className=' product-details-btn '>
      {/* <div className='-one'> */}
       {
-          Quantity === 0 ?   <button className='btn btn-outline-dark w-25 '  disabled>Sold out</button> :   <button onClick={handleDelivered} className='btn btn-outline-dark w-25 ml-3' >Delivered</button>
+          Quantity === 0 ?   <button className='btn btn-outline-dark w-25 '  disabled>stock out</button> :   <button onClick={handleDelivered} className='btn btn-outline-dark w-25 ml-3' >Decrement</button>
       }
 
    
    
-     <button onClick={handleOrder} className='btn btn-outline-dark  w-25 order-btn'  >  Order  </button>
+     <button onClick={handleOrder} className='btn btn-outline-dark  w-25 order-btn'  >  Increment  </button>
       
   
   

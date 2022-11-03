@@ -1,8 +1,8 @@
 import React, {  useState } from 'react';
+import toast from 'react-hot-toast';
 
 import UseItems from '../../Hooks/UseItems';
 import ManageItems from '../ManageItems/ManageItems';
-import MyItems from '../MyItems/MyItems';
 
 import './ManageInventory.css';
 
@@ -11,13 +11,11 @@ import './ManageInventory.css';
 
 const ManageInventory = () => {
     const [items , setItems] = UseItems();
-    const [myItems , setMyItems] = useState([]);
-    console.log(myItems);
+    
 
-    // console.log(items[0].Quantity)
    
-        
-    const handleDelete = id =>{
+        // delete manage product item
+    const handleDelete = (id) =>{
         const proceed = window.confirm('Are you sure');
          if(proceed){
             const url = `https://lit-earth-64208.herokuapp.com/items/${id}`;
@@ -26,36 +24,20 @@ const ManageInventory = () => {
             })
             .then(res =>res.json())
            .then(data =>{
-               console.log(data)
-               const remaining = items.filter(item => item._id !== id)
+              if(data.acknowledged === true){
+                toast.success("Delete Successfully");
+
+                  const remaining = items.filter(item => item._id !== id)
                setItems(remaining);
+              }                
+             
            })
          }
            
         };
     // add to my item 
    
-    const addToItem = (product) => {
-        let newCart = []
-        const exist =myItems.find((singleProduct)=> {return singleProduct._id === product._id})
-        // console.log(findSameProduct)
-        if(!exist){
-              newCart = [...myItems , product];
-        }
-        else{
-            return alert('already added')
-        }
-       
-       
-       
-       setMyItems(newCart);
-     }
-     const removeItem = (item) => {
-      const rest = myItems.filter(pd => pd._id !== item._id);
-    setMyItems(rest);
-    
    
-     }
 
 
 
@@ -63,27 +45,42 @@ const ManageInventory = () => {
 
       
               <>
+<div class=" mx-auto lg:w-3/4 mt-20 mb-14">
+  <table class="table lg:w-3/4">
+   
+    <thead className='mb-6'>
+      <tr>
+        <th></th>
+        <th className='lg:text-xl font-medium'>Price</th>
+        <th className=' lg:text-xl font-medium'>Quantity</th>
+        <th className=' lg:text-xl font-medium'>Supplier</th>
+      </tr>
+    </thead>
+    <tbody className=''>
     
-      
-
-    <div>
-
-       {
+    
+       
+      {
             items.map(item => <ManageItems key={item._id}
             item={item} handleDelete={handleDelete}
-            addToItem={addToItem} ></ManageItems> )
+             ></ManageItems> )
         }
-
+        
        
-    </div>
-    <div>
       
-        {
+      
+     
+     
+      
+    </tbody>
+ 
+  
+    
+  </table>
+</div>
 
-           myItems.map(myItem => <MyItems key={myItem._id}
-           myItem={myItem} removeItem={removeItem}></MyItems> )
-        }
-    </div>
+             
+     
     
 
      

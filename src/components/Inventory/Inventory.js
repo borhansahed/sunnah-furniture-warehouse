@@ -1,10 +1,10 @@
 import React from 'react';
-import UseInventory from '../../Hooks/UseInventory';
+import UseItems from '../../Hooks/UseItems';
 import InventoryItems from '../InventoryItems/InventoryItems';
 import './Inventory.css'
 
 const Inventory = () => {
-    const [products] = UseInventory();
+    const [products] = UseItems();
     return (
         <>
         <h3 className='text-center Inventory-products-title'>Shop Department Style</h3>

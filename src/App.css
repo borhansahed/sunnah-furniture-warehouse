@@ -6,6 +6,7 @@
   font-family: 'Cookie', cursive;
 font-family: 'Merriweather', serif;
 font-family: 'Poppins', sans-serif;
+-webkit-tap-highlight-color: transparent;
 cursor: pointer;
 }
 .App {

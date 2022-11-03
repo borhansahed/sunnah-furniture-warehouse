@@ -16,6 +16,7 @@ import Inventory from './components/Inventory/Inventory';
 import Footer from './components/Footer/Footer';
 import Blogs from './components/Blogs/Blogs';
 import About from './components/About/About';
+import { Toaster } from 'react-hot-toast';
 
 
 function App() {
@@ -32,7 +33,11 @@ function App() {
  }></Route>
  <Route path='/login' element={<Login></Login>}></Route>
  <Route path='/register' element={<Register></Register>}></Route>
- <Route path='/manageinventory' element={<ManageInventory></ManageInventory>}></Route>
+ <Route path='/manageinventory' element={
+ <RequireAuth>
+<ManageInventory/>
+ </RequireAuth>
+ }></Route>
  <Route path='/blogs' element={<Blogs></Blogs>}></Route>
  <Route path='/about' element={<About></About>}></Route>
  
@@ -43,7 +48,8 @@ function App() {
   <Route path='*' element={<NotFound></NotFound>}></Route>
  
   </Routes>
-  <Footer></Footer>
+  <Toaster />
+<Footer></Footer>
   
     </>
     

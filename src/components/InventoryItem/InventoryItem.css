@@ -34,7 +34,11 @@
     } */
     .product-detail-container{
         width: 350px;
-        margin: 3rem auto;
+        margin-left: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         
     }
     .product-detail-title p{

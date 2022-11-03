@@ -11,7 +11,7 @@ const NavLinks = () => {
         signOut(auth);
     }
     return (
-       <div className='header-links-container'>
+       <div className='header-links-container lg:shadow-none shadow-xl'>
        <div className='header-links'>
                 <Link to="/home">Home</Link>
                 <Link to="/inventory">Inventory</Link>
@@ -19,13 +19,12 @@ const NavLinks = () => {
                 {
                     user && <Link to="/additems">Add Item</Link> 
                 }
-                {
-                    user ? <Link to="/manageinventory">Managed Items</Link> :<Link to="/manageinventory">Manage Inventory</Link>
-                }
+                
+                    <Link to="/manageinventory">Managed Items</Link>
+                
           </div>  
-             <div className='header-links2'>
-             <Link to="/blogs">Blogs</Link>
-             <Link to="/about">About</Link>
+             <div className={`header-links2 ${user && 'lg:mr-0 mr-32'}` }>
+             
                  {
                      user && <Link to="/myitems">My Items</Link>
                  }
