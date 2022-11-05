@@ -5,8 +5,18 @@ import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram";
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
 import { FaYoutube } from "@react-icons/all-files/fa/FaYoutube";
 import { FaPinterest } from "@react-icons/all-files/fa/FaPinterest";
+import toast from 'react-hot-toast';
+import { useRef } from 'react';
 
 const Footer = () => {
+    const textRef = useRef();
+   
+
+    const handleSubmit = (event) =>{
+       event.preventDefault();
+            toast.success("We will Contact you soon");
+       
+    }
     return (
         <>
             <div className='footer'>
@@ -54,10 +64,10 @@ const Footer = () => {
                     <div className='social-container'>
                         <h4 className='text-center'>SOCIAL</h4>
 
-                        <div className=''>
-                            <input className='p-1 ' type="text" placeholder='Email Address' /><br />
-                            <button className='mt-3 mb-3 btn btn-outline-dark '>Submit</button>
-                        </div>
+                        <form onSubmit={handleSubmit}>
+                            <input  className='p-1 ' type="Email" placeholder='Email Address' /><br />
+                            <input type='submit' className='mt-3 mb-3 btn btn-outline-dark ' value={'Submit'}/>
+                        </form>
 
                         <div className='social-icons'>
 

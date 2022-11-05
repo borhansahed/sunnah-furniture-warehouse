@@ -24,5 +24,13 @@
   .homeButton button{
     font-size: 10px;
   } 
+  .product-btn {
+    position: absolute;
+   top: 44%;
+   left: 22%;
+   
+  
+  
+  }
     
 }

@@ -16,16 +16,21 @@ const InventoryItems = ({product}) => {
         <div className=''>
          <div className='inventory-product'>
       <img className='' src={picture} alt="" />
-      <h4 className='mt-3 '>{name}</h4>
+
+      <div>
+         <h4 className='mt-3 '>{name.slice(0,10)}</h4>
       
       <p>{description.slice(0,110)} ... <span onClick={ProductDetail}>See more</span></p>
       <h4 className='mb-2 '>${price}</h4>
+      <div className='product-details-btn'>
+     <button onClick={ProductDetail} className='btn btn-outline-dark lg:w-96  inventory-product-btn ' >update</button>
+     </div>
+      </div>
+     
  
       
 
-     <div className='product-details-btn'>
-     <button onClick={ProductDetail} className='btn btn-outline-dark lg:w-96  inventory-product-btn ' >update</button>
-     </div>
+     
       {/* <h5 className='product-title '>{name}</h5> */}
         </div>
         </div>

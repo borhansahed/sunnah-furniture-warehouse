@@ -6,7 +6,7 @@ const HomeProduct = () => {
     const[products ] =UseInventory()
     return (
         <>
-        <h3 className='text-center products-title'>Shop Each Department For your Style</h3>
+        <h3 className='text-center products-title mb-10'>Shop Each Department For your Style</h3>
        <div className='products'>
            {
            

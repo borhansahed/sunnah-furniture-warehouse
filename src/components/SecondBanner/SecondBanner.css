@@ -24,7 +24,11 @@
 }
 @media screen and (max-width:668px) {
 
-
+    .second-banner{
+        margin-top: 1.6rem;
+        position: relative;
+        margin-bottom: 1.7rem;
+    }
 
     .second-banner-title{
       

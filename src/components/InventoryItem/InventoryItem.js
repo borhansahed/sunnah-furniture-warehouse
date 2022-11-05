@@ -90,34 +90,34 @@ const InventoryItems = () => {
         <div className='product-detail-container'>
         <div className='product-detail'>
      <img className='' src={picture} alt="" />
+
    <div className='product-detail-title'>
-   <h4 className='mt-3 '>{name}</h4>
+   <h4 className='mt-3 '>{name?.slice(0,10)}</h4>
      
      
-     <p>{description}</p>
+     <p>{description?.slice(0,190)}.</p>
      
      
     
      <h6 >Supplier : {Supliername}</h6>
  <p>Quantity : {Quantity}</p>
 <h4 className='mb-2 '>${price}</h4>
-
-   </div>
-
-   <div  className=' product-details-btn '>
-     {/* <div className='-one'> */}
+<div  className=' product-details  mt-4'>
       {
-          Quantity === 0 ?   <button className='btn btn-outline-dark w-25 '  disabled>stock out</button> :   <button onClick={handleDelivered} className='btn btn-outline-dark w-25 ml-3' >Decrement</button>
+          Quantity === 0 ?   <button className='btn btn-outline-dark w-22 '  disabled>stock out</button> :   <button onClick={handleDelivered} className='btn btn-outline-dark w-22 ml-3' >Decrement</button>
       }
 
    
    
-     <button onClick={handleOrder} className='btn btn-outline-dark  w-25 order-btn'  >  Increment  </button>
+     <button onClick={handleOrder} className='btn btn-outline-dark  w-22 order-btn'  >  Increment  </button>
       
   
   
      
    </div>
+   </div>
+
+   
        </div>
        </div>
       

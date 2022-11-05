@@ -2,7 +2,7 @@
     width: 600px;
     margin: 4rem auto;
     color: rgb(71, 71, 71);
-    position: relative;
+  
 }
 .product-detail img{
     width: 80%;
@@ -28,16 +28,19 @@
 }
 @media screen and (max-width:668px) {
 
+    .product-detail{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     .product-detail img{
         width: 50%;
         
     }
     .product-detail-container{
         width: 340px;
-        margin-left: 70px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        
 
         
     }
@@ -50,12 +53,13 @@
         font-size: 0.8rem;
     }
     
-    .product-details-btn button{
-        margin-top: 12px;
+    .product-details button{
+       
         font-size: 0.7rem ;
+       
         
     }
     .product-detail h4{
-       font-size: 1.2rem;
+       font-size: 1rem;
     }
 }
