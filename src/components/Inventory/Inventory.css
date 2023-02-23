@@ -8,11 +8,12 @@
    
     display: grid;
     grid-template-columns: repeat( 3 , 1fr);
-    max-width: 1200px;
-    margin: 2rem auto;
+    max-width: 1300px;
+    margin: 3rem auto 6rem;
    justify-content: center;
    
     grid-column-gap: 4rem;
+    grid-row-gap: 4rem;
    
 }
 @media screen and (max-width:668px) {

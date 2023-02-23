@@ -26,7 +26,7 @@ const AddItems = () => {
          
     }
 
-     const url = `https://lit-earth-64208.herokuapp.com/items`;
+     const url = `https://warehouse-server-evqx.onrender.com/items`;
      fetch(url , {
         method:'POST',
         headers:{

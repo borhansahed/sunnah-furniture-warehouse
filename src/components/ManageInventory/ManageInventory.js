@@ -18,7 +18,7 @@ const ManageInventory = () => {
     const handleDelete = (id) =>{
         const proceed = window.confirm('Are you sure');
          if(proceed){
-            const url = `https://lit-earth-64208.herokuapp.com/items/${id}`;
+            const url = `https://warehouse-server-evqx.onrender.com/items/${id}`;
             fetch(url , {
                 method:'DELETE'
             })

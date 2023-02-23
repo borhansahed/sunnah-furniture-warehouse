@@ -1,7 +1,8 @@
 .inventory-product{
-  
+  height: calc(100vh / 1.4);
  
- margin-bottom: 4rem;  
+ margin-bottom: 4rem; 
+ position: relative;
  
    
   }
@@ -25,6 +26,11 @@
    text-decoration: none;
   
   }
+  .product-details-btn button{
+     
+    position:absolute;
+    bottom: 0;
+}
  
   @media screen and (max-width:668px) {
     .inventory-product{

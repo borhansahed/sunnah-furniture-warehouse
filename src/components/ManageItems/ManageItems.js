@@ -15,15 +15,16 @@ const ManageItems = ({item , handleDelete}) => {
 
     return (
      
-         <tr onClick={() => handleProduct(_id)} className=''>
+    
+         <tr  className=''>
           
-               <td > <img src={picture} alt="" /></td> 
+               <td onClick={() => handleProduct(_id)}> <img src={picture} alt="" /></td> 
            
-            <td className=''>{price}</td> 
-            <td>{Quantity} </td> 
-            <td>{Supliername} </td> 
-            <td className='manageButton'> <button onClick={()=>handleDelete(_id)} className='btn  btn-outline-dark  '>Delete</button> </td> 
-
+            <td onClick={() => handleProduct(_id)}>{price}</td> 
+            <td onClick={() => handleProduct(_id)}>{Quantity} </td> 
+            <td onClick={() => handleProduct(_id)}>{Supliername} </td> 
+           
+ <td className='manageButton'> <button onClick={()=>handleDelete(_id)} className='btn  btn-outline-dark  '>Delete</button> </td> 
         </tr>
 
 
