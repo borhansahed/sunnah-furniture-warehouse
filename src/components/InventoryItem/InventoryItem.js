@@ -45,7 +45,7 @@ const InventoryItems = () => {
         fetch(url)
         .then(res => res.json())
         .then(data =>setProduct(data));
-    },[product]);
+    },[product,id]);
     const {name ,description , picture , price,Quantity ,Supliername }=product;
 
      
