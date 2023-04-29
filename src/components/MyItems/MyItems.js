@@ -11,7 +11,7 @@ const MyItems = () => {
     const handleDelete = (id) =>{
         const proceed = window.confirm('Are you sure');
          if(proceed){
-            const url = `https://warehouse-server-evqx.onrender.com/items/${id}`;
+            const url = `https://sunnah-furniture-server.vercel.app/items/${id}`;
             fetch(url , {
                 method:'DELETE'
             })

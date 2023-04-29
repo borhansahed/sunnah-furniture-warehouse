@@ -5,7 +5,7 @@ const UseItems = () => {
         const [items , setItems] =useState([]);
 
         useEffect(() =>{
-            fetch('https://warehouse-server-evqx.onrender.com/items')
+            fetch('https://sunnah-furniture-server.vercel.app/items')
             .then(res => res.json())
             .then(data => setItems(data));
         },[])

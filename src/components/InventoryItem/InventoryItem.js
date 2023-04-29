@@ -20,7 +20,7 @@ const InventoryItems = () => {
         const currentQuantity = parseInt(Quantity) + 1;
         const UpdateQuantity = {Quantity : currentQuantity};
    
-        const url =`https://warehouse-server-evqx.onrender.com/items/${id}`;
+        const url =`https://sunnah-furniture-server.vercel.app/items/${id}`;
    
         fetch(url ,{
           method:'PUT',
@@ -41,7 +41,7 @@ const InventoryItems = () => {
         }
  
     useEffect(()=>{
-        const url =`https://warehouse-server-evqx.onrender.com/items/${id}`;
+        const url =`https://sunnah-furniture-server.vercel.app/items/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data =>setProduct(data));
@@ -54,7 +54,7 @@ const InventoryItems = () => {
         const currentQuantity = parseInt(Quantity) - 1;
         const UpdateQuantity = {Quantity : currentQuantity};
    
-        const url =`https://warehouse-server-evqx.onrender.com/items/${id}`;
+        const url =`https://sunnah-furniture-server.vercel.app/items/${id}`;
    
         fetch(url ,{
           method:'PUT',

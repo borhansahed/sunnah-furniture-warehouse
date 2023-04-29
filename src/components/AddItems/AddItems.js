@@ -26,7 +26,7 @@ const AddItems = () => {
          
     }
 
-     const url = `https://warehouse-server-evqx.onrender.com/items`;
+     const url = `https://sunnah-furniture-server.vercel.app/items`;
      fetch(url , {
         method:'POST',
         headers:{
